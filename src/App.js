@@ -1,26 +1,38 @@
 import React from 'react';
-import logo from './logo.svg';
+import Dock from './components/Dock';
+
+import chrome from './logos/chrome.svg';
+import docs from './logos/docs.svg';
+import excel from './logos/excel.svg';
+import gmail from './logos/gmail.svg';
+import photoshop from './logos/photoshop.svg';
+import powerpoint from './logos/powerpoint.svg';
+import safari from './logos/safari.svg';
+import slack from './logos/slack.svg';
+import spotify from './logos/spotify.svg';
+import steam from './logos/steam.svg';
+import vlc from './logos/vlc.svg';
+
 import './App.css';
 
-function App() {
+const images = [
+  chrome,
+  docs,
+  excel,
+  gmail,
+  photoshop,
+  powerpoint,
+  safari,
+  slack,
+  spotify,
+  steam,
+  vlc,
+];
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Dock images={images} />
     </div>
   );
 }
-
-export default App;
